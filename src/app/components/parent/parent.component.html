@@ -1,2 +1,6 @@
-<input formControlName="parent" label="parent" [class]="form.get('parent')?.invalid ? 'red' : 'default'">
-<app-child></app-child>
+<form [formGroup]="form">
+  <input formControlName="parent" label="parent" [class]="form.get('parent')?.invalid ? 'red' : 'default'">
+  <app-child></app-child>
+</form>
+</form>
+
