@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChildInterface } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -9,7 +10,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ParentComponent implements OnInit {
   form = new FormGroup({
     parent: new FormControl('', Validators.required),
-    child: new FormControl(''),
+    child: new FormControl({
+      indexChild: 'index!!!',
+      adressChild: 'address',
+    } as ChildInterface),
   });
 
   constructor() {}

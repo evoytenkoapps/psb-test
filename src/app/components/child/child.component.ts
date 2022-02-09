@@ -10,6 +10,11 @@ import {
   Validators,
 } from '@angular/forms';
 
+export interface ChildInterface {
+  adressChild: string;
+  indexChild: string;
+}
+
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
@@ -53,6 +58,7 @@ export class ChildComponent implements OnInit, ControlValueAccessor {
   setDisabledState(isDisabled: boolean): void {}
 
   writeValue(obj: any): void {
+    this.childForm.setValue(obj);
     console.log('writeValue', obj);
   }
 
