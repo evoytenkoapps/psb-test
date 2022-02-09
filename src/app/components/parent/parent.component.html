@@ -1,6 +1,5 @@
-<form [formGroup]="form">
+<form [formGroup]="form" class="form">
   <input formControlName="parent" label="parent" [class]="form.get('parent')?.invalid ? 'red' : 'default'">
-  <app-child></app-child>
-</form>
+  <app-child formControlName="child"></app-child>
 </form>
 

@@ -1,1 +1,7 @@
-<p>child works!</p>
+
+<form [formGroup]="childForm" class="form">
+  Child component
+  <input formControlName="adressChild" label="parent" [class]="childForm.get('adressChild')?.invalid ? 'red' : 'default'">
+  <input formControlName="indexChild" label="parent" [class]="childForm.get('indexChild')?.invalid ? 'red' : 'default'">
+</form>
+
